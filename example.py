@@ -1,10 +1,10 @@
 from pyvizpo import VizPortalApi, VizPortalError
 import logging
 
-tab_server = VizPortalApi('10.0.0.1', 80)
+logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.basicConfig(level=logging.DEBUG)
+    tab_server = VizPortalApi('10.0.0.1', 80)
     tab_server.login( 'my_username', 'my_password')
     tab_server.disable_schedule(1)
 
